@@ -3,12 +3,24 @@
   themes: light --default;
 }
 
-@layer utilities {
+/* @layer utilities {
+  .gradient-primary {
+    @apply bg-linear-to-br from-[#632EE3] to-[#9F62F2];
+  }
   .text-gradient-purple {
     background: linear-gradient(to bottom right, #632EE3, #9F62F2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+  }
+} */
+
+@layer utilities {
+  .gradient-primary {
+    @apply bg-linear-to-br from-[#632EE3] to-[#9F62F2];
+  }
+  .text-gradient-purple {
+    @apply bg-linear-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent
   }
 }

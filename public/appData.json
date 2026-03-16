@@ -1,0 +1,258 @@
+[
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/whatsapp.svg",
+    "title": "WhatsApp",
+    "companyName": "Meta",
+    "id": 1,
+    "description": "A fast and secure messaging app to chat with friends and family worldwide.",
+    "size": 45,
+    "reviews": 1203400,
+    "ratingAvg": 4.5,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 32000 },
+      { "name": "2 star", "count": 45000 },
+      { "name": "3 star", "count": 150000 },
+      { "name": "4 star", "count": 450000 },
+      { "name": "5 star", "count": 600000 }
+    ]
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/instagram.svg",
+    "title": "Instagram",
+    "companyName": "Meta",
+    "id": 2,
+    "description": "Share photos, reels and stories with your friends and followers.",
+    "size": 62,
+    "reviews": 890000,
+    "ratingAvg": 4.4,
+    "downloads": 3000000000,
+    "ratings": [
+      { "name": "1 star", "count": 28000 },
+      { "name": "2 star", "count": 36000 },
+      { "name": "3 star", "count": 120000 },
+      { "name": "4 star", "count": 300000 },
+      { "name": "5 star", "count": 406000 }
+    ]
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/spotify.svg",
+    "title": "Spotify",
+    "companyName": "Spotify Ltd",
+    "id": 3,
+    "description": "Stream millions of songs and discover new music every day.",
+    "size": 55,
+    "reviews": 650000,
+    "ratingAvg": 4.6,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 15000 },
+      { "name": "2 star", "count": 22000 },
+      { "name": "3 star", "count": 90000 },
+      { "name": "4 star", "count": 220000 },
+      { "name": "5 star", "count": 303000 }
+    ]
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/youtube.svg",
+    "title": "YouTube",
+    "companyName": "Google",
+    "id": 4,
+    "description": "Watch videos, livestreams and create your own content.",
+    "size": 78,
+    "reviews": 1500000,
+    "ratingAvg": 4.3,
+    "downloads": 10000000000,
+    "ratings": [
+      { "name": "1 star", "count": 85000 },
+      { "name": "2 star", "count": 90000 },
+      { "name": "3 star", "count": 210000 },
+      { "name": "4 star", "count": 500000 },
+      { "name": "5 star", "count": 615000 }
+    ]
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/netflix.svg",
+    "title": "Netflix",
+    "companyName": "Netflix Inc",
+    "id": 5,
+    "description": "Watch movies and TV shows anytime, anywhere.",
+    "size": 82,
+    "reviews": 540000,
+    "ratingAvg": 4.4,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 12000 },
+      { "name": "2 star", "count": 20000 },
+      { "name": "3 star", "count": 80000 },
+      { "name": "4 star", "count": 180000 },
+      { "name": "5 star", "count": 248000 }
+    ]
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/googledrive.svg",
+    "title": "Google Drive",
+    "companyName": "Google",
+    "id": 6,
+    "description": "Store, sync and share files securely across devices.",
+    "size": 35,
+    "reviews": 300000,
+    "ratingAvg": 4.5,
+    "downloads": 800000000,
+    "ratings": [
+      { "name": "1 star", "count": 9000 },
+      { "name": "2 star", "count": 12000 },
+      { "name": "3 star", "count": 45000 },
+      { "name": "4 star", "count": 110000 },
+      { "name": "5 star", "count": 124000 }
+    ]
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/googlemaps.svg",
+    "title": "Google Maps",
+    "companyName": "Google",
+    "id": 7,
+    "description": "Real-time navigation, traffic alerts and location discovery.",
+    "size": 48,
+    "reviews": 720000,
+    "ratingAvg": 4.4,
+    "downloads": 2000000000,
+    "ratings": [
+      { "name": "1 star", "count": 26000 },
+      { "name": "2 star", "count": 33000 },
+      { "name": "3 star", "count": 95000 },
+      { "name": "4 star", "count": 240000 },
+      { "name": "5 star", "count": 326000 }
+    ]
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/x.svg",
+    "title": "X",
+    "companyName": "X Corp",
+    "id": 8,
+    "description": "Share thoughts instantly and follow trending conversations.",
+    "size": 42,
+    "reviews": 410000,
+    "ratingAvg": 4.1,
+    "downloads": 900000000,
+    "ratings": [
+      { "name": "1 star", "count": 24000 },
+      { "name": "2 star", "count": 34000 },
+      { "name": "3 star", "count": 78000 },
+      { "name": "4 star", "count": 120000 },
+      { "name": "5 star", "count": 154000 }
+    ]
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/tiktok.svg",
+    "title": "TikTok",
+    "companyName": "ByteDance",
+    "id": 9,
+    "description": "Create and share fun short videos with music and effects.",
+    "size": 66,
+    "reviews": 980000,
+    "ratingAvg": 4.3,
+    "downloads": 4000000000,
+    "ratings": [
+      { "name": "1 star", "count": 55000 },
+      { "name": "2 star", "count": 72000 },
+      { "name": "3 star", "count": 150000 },
+      { "name": "4 star", "count": 320000 },
+      { "name": "5 star", "count": 383000 }
+    ]
+  },
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/zoom.svg",
+    "title": "Zoom",
+    "companyName": "Zoom",
+    "id": 10,
+    "description": "HD video meetings and team collaboration from anywhere.",
+    "size": 50,
+    "reviews": 260000,
+    "ratingAvg": 4.2,
+    "downloads": 700000000,
+    "ratings": [
+      { "name": "1 star", "count": 12000 },
+      { "name": "2 star", "count": 19000 },
+      { "name": "3 star", "count": 52000 },
+      { "name": "4 star", "count": 78000 },
+      { "name": "5 star", "count": 99000 }
+    ]
+  },
+
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/evernote.svg",
+    "title": "Evernote",
+    "companyName": "Evernote",
+    "id": 11,
+    "description": "Take notes, organize tasks and boost productivity.",
+    "size": 33,
+    "reviews": 180000,
+    "ratingAvg": 4.4,
+    "downloads": 300000000,
+    "ratings": [
+      { "name": "1 star", "count": 6000 },
+      { "name": "2 star", "count": 8000 },
+      { "name": "3 star", "count": 26000 },
+      { "name": "4 star", "count": 68000 },
+      { "name": "5 star", "count": 72000 }
+    ]
+  },
+
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/calculator.svg",
+    "title": "Calculator",
+    "companyName": "Google",
+    "id": 12,
+    "description": "Advanced scientific calculator with a simple interface.",
+    "size": 12,
+    "reviews": 90000,
+    "ratingAvg": 4.6,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 2000 },
+      { "name": "2 star", "count": 3000 },
+      { "name": "3 star", "count": 9000 },
+      { "name": "4 star", "count": 25000 },
+      { "name": "5 star", "count": 51000 }
+    ]
+  },
+
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/weather.svg",
+    "title": "Weather",
+    "companyName": "Weather Inc",
+    "id": 13,
+    "description": "Accurate weather forecasts and live radar updates.",
+    "size": 28,
+    "reviews": 140000,
+    "ratingAvg": 4.3,
+    "downloads": 250000000,
+    "ratings": [
+      { "name": "1 star", "count": 5000 },
+      { "name": "2 star", "count": 7000 },
+      { "name": "3 star", "count": 23000 },
+      { "name": "4 star", "count": 47000 },
+      { "name": "5 star", "count": 58000 }
+    ]
+  },
+
+  {
+    "image": "https://cdn.jsdelivr.net/npm/simple-icons/icons/fitbit.svg",
+    "title": "Fitbit",
+    "companyName": "Google",
+    "id": 14,
+    "description": "Track workouts, calories and stay fit every day.",
+    "size": 38,
+    "reviews": 210000,
+    "ratingAvg": 4.5,
+    "downloads": 400000000,
+    "ratings": [
+      { "name": "1 star", "count": 6000 },
+      { "name": "2 star", "count": 9000 },
+      { "name": "3 star", "count": 32000 },
+      { "name": "4 star", "count": 76000 },
+      { "name": "5 star", "count": 87000 }
+    ]
+  }
+]

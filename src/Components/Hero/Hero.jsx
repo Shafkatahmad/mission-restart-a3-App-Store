@@ -1,6 +1,7 @@
 import { FaAppStore, FaGooglePlay } from "react-icons/fa";
 import { Link } from "react-router";
 import hero from "../../assets/hero.png";
+import TrendProducts from "../TrendProducts/TrendProducts";
 
 const Hero = () => {
   return (
@@ -53,6 +54,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <TrendProducts></TrendProducts>
     </div>
   );
 };
