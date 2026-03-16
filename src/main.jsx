@@ -6,6 +6,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Root from "./Components/Root/Root.jsx";
 import Hero from "./Components/Hero/Hero.jsx";
+import AppDetails from "./Components/AppDetails/AppDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Hero,
+      },
+      {
+        path: "app/:id",
+        loader: () => fetch("/appData.json"),
+        element: <AppDetails></AppDetails>,
       },
     ],
   },
