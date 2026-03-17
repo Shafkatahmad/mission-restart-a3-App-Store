@@ -8,6 +8,7 @@ import Root from "./Components/Root/Root.jsx";
 import Hero from "./Components/Hero/Hero.jsx";
 import AppDetails from "./Components/AppDetails/AppDetails.jsx";
 import InstalledAppContainer from "./Components/InstalledApp/InstalledAppContainer.jsx";
+import AllApps from "./Components/AllApps/AllApps.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,15 @@ const router = createBrowserRouter([
       {
         path: "app/:id",
         loader: () => fetch("/appData.json"),
+        element: <AppDetails></AppDetails>,
+      },
+      {
+        path: "allApps",
+        loader: () => fetch("/appData.json"),
+        element: <AllApps></AllApps>,
+      },
+      {
+        path: "allApps/app/:id",
         element: <AppDetails></AppDetails>,
       },
       {

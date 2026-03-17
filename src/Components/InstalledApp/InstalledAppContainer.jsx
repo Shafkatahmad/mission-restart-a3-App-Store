@@ -1,47 +1,36 @@
 import { FaCaretDown } from "react-icons/fa";
-import { getStoredAppledList } from "../../utilities/installToLocal";
+import {
+  getStoredAppledList,
+  removeAppFromLocalStorage,
+} from "../../utilities/installToLocal";
 import { useLoaderData } from "react-router";
 import InstalledApp from "./InstalledApp";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const InstalledAppContainer = () => {
-  const [appList, setAppList] = useState([]);
   const [sort, setSort] = useState("");
+  const [refresh, setRefresh] = useState(0); // 🔥 trigger re-render
 
   const apps = useLoaderData();
+
+  // 🔹 Get installed app IDs from localStorage
   const appInstalledStr = getStoredAppledList();
-  const appsInstalled = appInstalledStr.map((appId) => parseInt(appId));
-  console.log(appsInstalled);
+  const appsInstalled = appInstalledStr.map((id) => parseInt(id));
 
+  // 🔹 Filter installed apps
   const installedApps = apps.filter((app) => appsInstalled.includes(app.id));
-  console.log(installedApps);
-  useEffect(() => {
-    if (appList.length === 0) {
-      setAppList(installedApps);
-    }
-  }, [installedApps, appList.length]);
 
-  const handleSort = (sortType) => {
-    setSort(sortType);
+  // 🔹 Sort logic (derived)
+  const sortedApps = [...installedApps].sort((a, b) => {
+    if (sort === "High-Low") return b.downloads - a.downloads;
+    if (sort === "Low-High") return a.downloads - b.downloads;
+    return 0;
+  });
 
-    if (sortType === "High-Low") {
-      const sortedAppByHighToLow = [...appList].sort(
-        (a, b) => b.downloads - a.downloads,
-      );
-      setAppList(sortedAppByHighToLow);
-    }
-    if (sortType === "Low-High") {
-      const sortedAppByLowToHigh = [...appList].sort(
-        (a, b) => a.downloads - b.downloads,
-      );
-      setAppList(sortedAppByLowToHigh);
-    }
-  };
-
+  // 🔹 Handle uninstall
   const handleUnInstall = (id) => {
-    const updatedAppList = appList.filter((app) => app.id != id);
-
-    setAppList(updatedAppList);
+    removeAppFromLocalStorage(id);
+    setRefresh((prev) => prev + 1); // 🔥 force re-render
   };
 
   return (
@@ -58,36 +47,46 @@ const InstalledAppContainer = () => {
           <h5 className="text-2xl font-semibold">
             {installedApps.length} Apps Found
           </h5>
+
+          {/* 🔽 Sort Dropdown */}
           <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
               className="btn font-normal text-[#627382] m-1"
             >
-              Sort By Downloads <FaCaretDown></FaCaretDown>
+              {sort ? `Sorted: ${sort}` : "Sort By Downloads"} <FaCaretDown />
             </div>
+
             <ul
-              tabIndex="-1"
-              className="dropdown-content menu bg-base-100 rounded-box z-1 w-26 shadow-sm"
+              tabIndex={-1}
+              className="dropdown-content menu bg-base-100 rounded-box z-1 w-40 shadow-sm"
             >
-              <li onClick={() => handleSort("High-Low")}>
-                <a>High-Low</a>
+              <li onClick={() => setSort("High-Low")}>
+                <a>High → Low</a>
               </li>
-              <li onClick={() => handleSort("Low-High")}>
-                <a>Low-High</a>
+              <li onClick={() => setSort("Low-High")}>
+                <a>Low → High</a>
               </li>
             </ul>
           </div>
         </div>
 
+        {/* 🔹 Installed Apps List */}
         <div>
-          {appList.map((installApp) => (
-            <InstalledApp
-              key={installApp.id}
-              installApp={installApp}
-              handleUnInstall={handleUnInstall}
-            ></InstalledApp>
-          ))}
+          {sortedApps.length === 0 ? (
+            <p className="text-center text-xl text-gray-500">
+              No apps installed
+            </p>
+          ) : (
+            sortedApps.map((installApp) => (
+              <InstalledApp
+                key={installApp.id}
+                installApp={installApp}
+                handleUnInstall={handleUnInstall}
+              />
+            ))
+          )}
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
   const links = (
     <>
       <NavLink to="/">Home</NavLink>
-      <NavLink>Apps</NavLink>
+      <NavLink to="/allApps">Apps</NavLink>
       <NavLink to="/installedApps">Installation</NavLink>
     </>
   );
@@ -39,7 +39,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img className="w-10" src={logo} alt="" />
           <a className="text-xl font-bold bg-linear-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
             Hero.IO
