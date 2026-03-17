@@ -25,4 +25,4 @@ const addToStoredAppList = (id) => {
   }
 }
 
-export {addToStoredAppList, appInstalled}
+export {getStoredAppledList, addToStoredAppList, appInstalled}

@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <NavLink to="/">Home</NavLink>
       <NavLink>Apps</NavLink>
-      <NavLink>Installation</NavLink>
+      <NavLink to="/installedApps">Installation</NavLink>
     </>
   );
   return (
