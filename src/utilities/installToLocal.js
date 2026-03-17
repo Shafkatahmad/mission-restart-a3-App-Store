@@ -25,4 +25,12 @@ const addToStoredAppList = (id) => {
   }
 }
 
-export {getStoredAppledList, addToStoredAppList, appInstalled}
+const removeAppFromLocalStorage = (idToRomove) => {
+  const storedList = getStoredAppledList();
+
+  const updatedList = storedList.filter(id => id != idToRomove);
+  const updatedListStr = JSON.stringify(updatedList);
+  localStorage.setItem('app-list', updatedListStr);
+
+}
+export {getStoredAppledList, addToStoredAppList, appInstalled, removeAppFromLocalStorage}

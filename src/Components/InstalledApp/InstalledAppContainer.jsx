@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 const InstalledAppContainer = () => {
   const [appList, setAppList] = useState([]);
   const [sort, setSort] = useState("");
+
   const apps = useLoaderData();
   const appInstalledStr = getStoredAppledList();
   const appsInstalled = appInstalledStr.map((appId) => parseInt(appId));
@@ -18,7 +19,7 @@ const InstalledAppContainer = () => {
     if (appList.length === 0) {
       setAppList(installedApps);
     }
-  }, [installedApps]);
+  }, [installedApps, appList.length]);
 
   const handleSort = (sortType) => {
     setSort(sortType);
@@ -35,6 +36,12 @@ const InstalledAppContainer = () => {
       );
       setAppList(sortedAppByLowToHigh);
     }
+  };
+
+  const handleUnInstall = (id) => {
+    const updatedAppList = appList.filter((app) => app.id != id);
+
+    setAppList(updatedAppList);
   };
 
   return (
@@ -78,6 +85,7 @@ const InstalledAppContainer = () => {
             <InstalledApp
               key={installApp.id}
               installApp={installApp}
+              handleUnInstall={handleUnInstall}
             ></InstalledApp>
           ))}
         </div>

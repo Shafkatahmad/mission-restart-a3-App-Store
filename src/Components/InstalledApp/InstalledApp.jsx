@@ -1,7 +1,10 @@
 import downloadIcon from "../../assets/icon-downloads.png";
 import ratingIcon from "../../assets/icon-ratings.png";
-const InstalledApp = ({ installApp }) => {
-  const { image, title, description, downloads, ratingAvg, size } = installApp;
+import { removeAppFromLocalStorage } from "../../utilities/installToLocal";
+const InstalledApp = ({ installApp, handleUnInstall }) => {
+  const { image, title, description, downloads, ratingAvg, size, id } =
+    installApp;
+
   return (
     <div className="p-4 bg-white mb-4 rounded-sm">
       <div className="flex items-center justify-between">
@@ -43,7 +46,12 @@ const InstalledApp = ({ installApp }) => {
           </div>
         </div>
         <div>
-          <button className="font-semibold px-4 py-3 bg-[#00D390] cursor-pointer rounded-sm">
+          <button
+            onClick={() => {
+              (handleUnInstall(id), removeAppFromLocalStorage(id));
+            }}
+            className="font-semibold px-4 py-3 bg-[#00D390] cursor-pointer rounded-sm"
+          >
             Uninstall
           </button>
         </div>
