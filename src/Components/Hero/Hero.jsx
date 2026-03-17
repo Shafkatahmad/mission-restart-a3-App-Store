@@ -5,7 +5,7 @@ import TrendProducts from "../TrendProducts/TrendProducts";
 
 const Hero = () => {
   return (
-    <div className="mb-20">
+    <div className="mb-20 bg-gray-100 py-10">
       <div className="max-w-170 text-center mx-auto">
         <h1 className="text-[72px] font-black mb-4">
           We Build <span className="text-gradient-purple">Productive</span> Apps
