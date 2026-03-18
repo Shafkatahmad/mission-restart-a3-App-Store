@@ -16,14 +16,20 @@ const Hero = () => {
           into digital experiences that truly make an impact.
         </p>
         <div className="mb-10">
-          <Link className="flex gap-4 justify-center">
-            <button className="flex items-center gap-2 border border-[#D2D2D2] rounded-sm px-5 py-4">
+          <div className="flex gap-4 justify-center">
+            <Link
+              to="https://play.google.com/store/games?hl=en"
+              className="flex items-center gap-2 border border-[#D2D2D2] rounded-sm px-5 py-4"
+            >
               <FaGooglePlay></FaGooglePlay> Google Play
-            </button>
-            <button className="flex items-center gap-2 border border-[#D2D2D2] rounded-sm px-5 py-4">
+            </Link>
+            <Link
+              to="https://www.apple.com/app-store/"
+              className="flex items-center gap-2 border border-[#D2D2D2] rounded-sm px-5 py-4"
+            >
               <FaAppStore></FaAppStore> App Store
-            </button>
-          </Link>
+            </Link>
+          </div>
         </div>
         <figure>
           <img src={hero} alt="" />

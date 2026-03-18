@@ -1,4 +1,6 @@
 a.active {
   text-decoration: underline;
-  color: linear-gradient(135deg, #632EE3, #9F62F2);
+  background: linear-gradient(to bottom right, #632EE3, #9F62F2);
+  background-clip: text;
+  color: transparent;
 }

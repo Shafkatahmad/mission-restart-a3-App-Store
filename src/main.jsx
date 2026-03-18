@@ -9,11 +9,14 @@ import Hero from "./Components/Hero/Hero.jsx";
 import AppDetails from "./Components/AppDetails/AppDetails.jsx";
 import InstalledAppContainer from "./Components/InstalledApp/InstalledAppContainer.jsx";
 import AllApps from "./Components/AllApps/AllApps.jsx";
+import Error404 from "./Components/Error404.jsx/Error404.jsx";
+import ErrorApp from "./Components/ErrorApp/ErrorApp.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error404></Error404>,
     children: [
       {
         index: true,
@@ -23,6 +26,7 @@ const router = createBrowserRouter([
         path: "app/:id",
         loader: () => fetch("/appData.json"),
         element: <AppDetails></AppDetails>,
+        errorElement: <ErrorApp></ErrorApp>,
       },
       {
         path: "allApps",

@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import SingleApp from "../SingleApp/SingleApp";
 import { useState } from "react";
 
@@ -19,7 +19,7 @@ const AllApps = () => {
     search.length === 0 ? setUpdatedApps(apps) : setUpdatedApps(newApps);
   };
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 py-10">
       <div className="w-11/12 mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-5xl font-bold mb-4">Our All Applications</h2>
@@ -46,7 +46,7 @@ const AllApps = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {updatedApps.length === 0 ? (
-            <h2 className="text-xl font-semibold col-span-full text-center">
+            <h2 className="text-4xl font-semibold col-span-full text-center mb-4">
               No App Found
             </h2>
           ) : (
