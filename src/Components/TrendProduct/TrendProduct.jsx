@@ -3,7 +3,7 @@ import { RiDownload2Line } from "react-icons/ri";
 import { Link } from "react-router";
 
 const TrendProduct = ({ app }) => {
-  const { id, image, title, description, downloads, ratings } = app;
+  const { id, image, title, downloads, ratings } = app;
 
   return (
     <Link to={`app/${id}`}>

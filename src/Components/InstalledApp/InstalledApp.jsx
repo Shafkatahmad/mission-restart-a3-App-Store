@@ -14,13 +14,13 @@ const InstalledApp = ({ installApp, handleUnInstall }) => {
           </figure>
 
           <div className="flex flex-col">
-            <div className="mb-4 border border-blue-700">
+            <div className="mb-4">
               <h4 className="text-xl font-semibold">
                 {title}: {description}
               </h4>
             </div>
 
-            <div className="flex gap-4 border border-red-700">
+            <div className="flex gap-4">
               <div className="flex gap-1 items-center text-[#00D390]">
                 <img className="w-4 h-4" src={downloadIcon} alt="" />
                 <p>

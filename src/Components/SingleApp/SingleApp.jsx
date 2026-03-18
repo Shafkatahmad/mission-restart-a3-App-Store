@@ -2,13 +2,13 @@ import { FaStar } from "react-icons/fa";
 import { RiDownload2Line } from "react-icons/ri";
 import { Link } from "react-router";
 
-const SingleApp = ({ app, loading }) => {
+const SingleApp = ({ app }) => {
   const { id, image, title, downloads, ratings } = app;
   return (
     <Link to={`/app/${id}`}>
       <div className="p-4">
         <div>
-          <figure className="mb-4">
+          <figure className="mb-4 ">
             <img className="object-cover" src={image} alt="" />
           </figure>
           <div className="flex items-center justify-center gap-2 border border-red-700 mb-4">
