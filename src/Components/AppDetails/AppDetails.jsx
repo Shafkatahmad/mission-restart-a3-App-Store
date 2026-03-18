@@ -17,6 +17,7 @@ import {
 } from "chart.js";
 
 import { Bar } from "react-chartjs-2";
+import { toast } from "react-toastify";
 
 // Register chart components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
@@ -141,7 +142,10 @@ const AppDetails = () => {
           <Link>
             <button
               disabled={appInstalled(id)}
-              onClick={() => handleInstal(id)}
+              onClick={() => {
+                (handleInstal(id),
+                  toast.success("Congratulations! App Installed Successfully"));
+              }}
               className="px-5 py-3 bg-[#00D390] rounded-sm text-xl font-semibold text-white cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
               {appInstalled(id) ? "Installed" : `Install Now (${size} MB)`}

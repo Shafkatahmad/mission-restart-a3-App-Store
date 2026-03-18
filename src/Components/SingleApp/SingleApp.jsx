@@ -2,7 +2,7 @@ import { FaStar } from "react-icons/fa";
 import { RiDownload2Line } from "react-icons/ri";
 import { Link } from "react-router";
 
-const SingleApp = ({ app }) => {
+const SingleApp = ({ app, loading }) => {
   const { id, image, title, downloads, ratings } = app;
   return (
     <Link to={`/app/${id}`}>
