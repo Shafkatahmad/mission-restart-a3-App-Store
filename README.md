@@ -65,25 +65,25 @@ src/
 
 ## Future Improvements
 
-- 🔄 Global state management (Context API / Redux)
-- ⚡ Data caching & performance optimization
-- 🔍 Advanced filtering system
-- 🧩 Modal-based app details view
-- 🌐 Backend integration (MERN stack)
+- Global state management (Context API / Redux)
+- Data caching & performance optimization
+- Advanced filtering system
+- Modal-based app details view
+- Backend integration (MERN stack)
 
 ---
 
 ## 📸 Screenshots
 
-| 🏠 Home                     | 📱 All Apps                     |
+| Home                        | All Apps                        |
 | --------------------------- | ------------------------------- |
 | ![](./screenshots/home.png) | ![](./screenshots/all-apps.png) |
 
-| 📄 Details                     | 📥 Installed                     |
+| Details                        | Installed                        |
 | ------------------------------ | -------------------------------- |
 | ![](./screenshots/details.png) | ![](./screenshots/installed.png) |
 
-### 📊 Statistics
+### Statistics
 
 ![](./screenshots/stats.png)
 
