@@ -7,12 +7,12 @@ const SingleApp = ({ app }) => {
   return (
     <Link to={`/app/${id}`}>
       <div className="p-4">
-        <div>
+        <div className="bg-gray-200 p-4 rounded-2xl">
           <figure className="mb-4 ">
-            <img className="object-cover" src={image} alt="" />
+            <img className="object-cover rounded-xl" src={image} alt="" />
           </figure>
-          <div className="flex items-center justify-center gap-2 border border-red-700 mb-4">
-            <h6 className="text-xl line-clamp-1">{title}: </h6>
+          <div className="flex items-center  gap-2 mb-4">
+            <h6 className="text-xl line-clamp-1">{title}</h6>
             {/* <p className="truncate">{description}</p> */}
           </div>
           <div className="flex justify-between">

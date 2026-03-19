@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import downloadIcon from "../../assets/icon-downloads.png";
 import ratingIcon from "../../assets/icon-ratings.png";
 import { removeAppFromLocalStorage } from "../../utilities/installToLocal";
@@ -48,7 +49,9 @@ const InstalledApp = ({ installApp, handleUnInstall }) => {
         <div>
           <button
             onClick={() => {
-              (handleUnInstall(id), removeAppFromLocalStorage(id));
+              (handleUnInstall(id),
+                removeAppFromLocalStorage(id),
+                toast.success("App Uninstalled"));
             }}
             className="font-semibold px-4 py-3 bg-[#00D390] cursor-pointer rounded-sm"
           >
